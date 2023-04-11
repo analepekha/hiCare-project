@@ -1,0 +1,57 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+
+    @include mq (desktop){
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+ .header__container{
+    display: flex;
+    align-items: center;
+ }
+
+ .header__logo {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.46;
+    color: $secondary-txt;
+
+    margin-right: 274px;
+ }
+
+ .nav {
+     display: flex;
+     margin-right: 165px;
+ }
+
+ .nav__list{
+    display: flex;
+ }
+
+ .nav__item:not(:last-child){
+    margin-right: 40px;
+ }
+
+ .nav__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.45;
+    color: $secondary-txt;
+ }
+
+ .header__link {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.45;
+    color: $secondary-txt;
+    padding: 9px 20px;
+    border: 1px solid #F8F6F1;
+
+    margin-left: auto;
+
+ }

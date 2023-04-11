@@ -1,0 +1,15 @@
+body {
+    font-family: $text-font;
+    color: $primary-txt;
+    background-color: $background-main;
+}
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include mq (desktop){
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
