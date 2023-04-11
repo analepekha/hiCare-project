@@ -1,0 +1,29 @@
+{
+  "name": "hiCare-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analepekha/hiCare-project.git"
+  },
+  "keywords": [],
+  "author": "Anastasiia Lepekha <anastasiia.lepekha@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/analepekha/hiCare-project/issues"
+  },
+  "homepage": "https://github.com/analepekha/hiCare-project#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.7.4"
+  }
+}
