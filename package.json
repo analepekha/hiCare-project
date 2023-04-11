@@ -1,11 +1,14 @@
 {
-  "name": "hiCare-project",
+  "name": "hicare-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html --public-url /hiCare-project/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+
   },
   "repository": {
     "type": "git",
@@ -17,11 +20,12 @@
   "bugs": {
     "url": "https://github.com/analepekha/hiCare-project/issues"
   },
-  "homepage": "https://github.com/analepekha/hiCare-project#readme",
+  "homepage": "https://github.com/analepekha/hiCare-project",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.7.4"
