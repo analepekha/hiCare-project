@@ -1,0 +1,12 @@
+.feedback__list {
+    display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        grid-gap: 40px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.feedback__item{
+    height: 330px;
+border: 1px solid #95824A;
+}

@@ -1,0 +1,24 @@
+.orders__wrapper {
+    display: flex;
+}
+.orders__wrapper-txt{
+    width: 500px;
+    margin-right: 60px;
+}
+.orders__subtitle{
+    font-weight: 400;
+        font-size: 30px;
+        line-height: 1.46;
+        color: $accent-txt;
+
+        margin-bottom: 10px;
+
+}
+.orders__txt{
+font-weight: 400;
+font-size: 20px;
+line-height: 1.45;
+}
+.orders__link{
+    color: $accent-txt;
+}

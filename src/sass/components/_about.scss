@@ -1,0 +1,34 @@
+.about {
+    padding-top: 100px ;
+}
+
+.about__picture{
+        margin-right: 60px;
+}
+
+.about__wrapper{
+    display: flex;
+
+}
+
+.about__info-wrapper{
+    width: 600px;
+}
+.about__info:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.about__subtitle {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.46;
+    color: $accent-txt;
+
+    margin-bottom: 10px;
+}
+
+.about__txt{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.45;
+}

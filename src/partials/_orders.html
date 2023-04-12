@@ -1,13 +1,30 @@
 <section class="orders section">
     <div class="container">
-        <h2 class="orders__title">Замовити зараз</h2>
-        <h3 class="orders__subtitle">Закохались у наш продукт?</h3>
-        <p class="orders__txt">Для замовлення напишіть в телеграм або вайбер або зателефонуйте за номером
-            <a href="tel:+380506916763" class="contacts__item-link">+380506916763</a>
-            Або залиште свої контакти. Наш менеджер зв'яжеться з вами, оформе замовлення та надішле реквізити для
-            оплати. Приймаємо
-            оплату тільки на розрахунковий рахунок ФОП.
-            Ми працюємо над онлайн-оплатою і скоро така опція з'явиться на сайті.
-        </p>
+        <h2 class="orders__title title">Замовити зараз</h2>
+        <div class="orders__wrapper">
+            <div class="orders__wrapper-txt">
+                        <h3 class="orders__subtitle">Закохались у наш продукт?</h3>
+                        <p class="orders__txt">Для замовлення напишіть в телеграм або вайбер або зателефонуйте за номером
+                            <a href="tel:+380506916763" class="orders__link">+380506916763</a>
+                            <br> Або залиште свої контакти. Наш менеджер зв'яжеться з вами, оформе замовлення та надішле реквізити для
+                            оплати. Приймаємо
+                            оплату тільки на розрахунковий рахунок ФОП. <br>
+                            Ми працюємо над онлайн-оплатою і скоро така опція з'явиться на сайті.
+                        </p>
+
+            </div>
+        <picture>
+            <source
+            srcset="
+            images/orders/orders_lg.webp 1x,
+            images/orders/orders_lg@2x.webp 2x"
+            media="(min-width: 1160px)"
+            type="image/webp"/>
+            <source srcset="
+                        images/orders/orders_lg.jpg 1x,
+                        images/orders/orders_lg@2x.jpg 2x" media="(min-width: 1160px)" type="image/jpg" />
+                        <img src="/images/orders/orders_lg.jpg" alt="HiCare товар" width="600" height="286"/>
+        </picture>
+        </div>
     </div>
 </section>
