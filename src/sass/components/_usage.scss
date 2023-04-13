@@ -1,17 +1,29 @@
 .usage {
+    @include mq(desktop){
     padding-top: 151px;
+    }
 }
 
 .usage__wrapper{
     display: flex;
+    flex-direction: column;
+
+    @include mq (desktop){
+        flex-direction: row;
+    }
 }
 
 .usage__txt{
     font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 30px;
+
+    @include mq (desktop){
         font-size: 30px;
         line-height: 1.46;
-
+margin-bottom: 0;
         margin-right: 60px;
+    }
 }
 
 .usage__video{

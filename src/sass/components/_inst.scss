@@ -4,9 +4,15 @@
 
 .inst__list{
     display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-        grid-gap: 40px;
-        margin-left: auto;
+    margin-left: auto;
         margin-right: auto;
+        grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+            grid-gap: 30px;
+    @include mq(desktop){
+grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 40px;
+    }
+        
+       
 }
 

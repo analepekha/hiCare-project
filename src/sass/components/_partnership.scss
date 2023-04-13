@@ -1,22 +1,34 @@
 .partnership__wrapper {
     display: flex;
+    flex-direction: column-reverse;
+
+    @include mq (desktop){
+        flex-direction: row;
+    }
 
 }
 .partnership__form {
     display: flex;
     flex-direction: column;
+
+    @include mq (desktop){
     margin-right: 60px;
+    }
 }
 .partnership__input{
-    width: 500px;
-    padding: 13px 30px;
+    width: 100%;
+padding: 13px 30px;
     margin-bottom: 10px;
-    outline:none;
+    outline: none;
     border: 1px solid $primary-txt;
     background-color: $background-main;
     font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
+    font-size: 20px;
+    line-height: 1.45;
+    @include mq(desktop){
+    width: 500px;
+    }
+    
     // opacity: 0.7;
 }
 
@@ -37,29 +49,50 @@
         font-size: 20px;
         line-height: 1.45;
         border: 1px solid $primary-txt;
+width: 100%;
+padding-bottom: 13px;
+padding-top: 13px;
+        @include mq(desktop){
         padding: 13px 196px;
+        }
 }
 
 .partnership__subtitle{
     font-weight: 400;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 1.46;
         color: $accent-txt;
 
-        margin-bottom: 10px;;
+        margin-bottom: 10px;
+         @include mq(desktop){
+                    font-size: 30px;
+         }
 }
 
 .partnership__txt{
 font-weight: 400;
 font-size: 20px;
 line-height: 1.45;
-
-margin-bottom: 30px;
+margin-bottom: 20px;
+@include mq(desktop) {
+margin-bottom: 30px;    }
 }
 .contacts__list{
     display: flex;
-}
+    flex-direction: column;
+    margin-bottom: 20px;
+    @include mq (desktop) {
+            flex-direction: row;
+            margin-bottom: 0;
+        }
 
+
+}
+.contacts__item{
+    @include mq(notDesktop){
+        display: flex;
+    }
+}
 .contacts__item:not(:last-child){
     margin-right: 100px;
 }
@@ -69,6 +102,10 @@ margin-bottom: 30px;
         font-size: 20px;
         line-height: 1.45;
                 color: $accent-txt;
+
+                @include mq(notDesktop) {
+                        margin-right: 5px;
+                    }
 
 }
 
@@ -80,8 +117,10 @@ font-weight: 400;
     }
 
 .choices{
-    width: 500px;
+    width: 100%;
     margin-bottom: 10px;
+    @include mq (desktop) {
+    width: 500px;        }
         
 }
 
@@ -147,7 +186,10 @@ padding-right: 30px;
     border: 2px solid rgb(18, 18, 17, 0.7);
     border-width: 0 0 2px 2px;
     transform: rotate(-45deg);
+    margin-right: 10px;
+    @include mq (desktop){
     margin-right: 20px;
+    }
 }
 
 .choices[data-type*=select-one].is-open:after {

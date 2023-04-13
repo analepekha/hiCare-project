@@ -1,10 +1,16 @@
 .footer {
-    margin-top: 180px;
+    margin-top: 100px;
     background-color: $background-secondary;
+    @include mq(desktop){
+    margin-top: 180px;
+    }
 }
 .footer__container{
+    padding-top: 60px;
+        padding-bottom: 60px;
+    @include mq(desktop) {
     padding-top: 40px;
-    padding-bottom: 40px;
+        padding-bottom: 40px;        }
 }
 
 .footer__logo{
@@ -21,16 +27,28 @@
 }
 
 .nav__footer{
-    padding-top: 30px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    @include mq(desktop) {
+            padding-top: 30px;
+            margin-bottom: 0
+        }
+
 
 }
 .footer__list{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include mq(desktop) {
+    justify-content: center;     
+  }
 
 }
 .footer__item:not(:last-child) {
-margin-right: 50px;
+        margin-bottom: 20px;
+    @include mq(desktop) {
+margin-right: 50px;        }
 }
 .footer__link{
     font-weight: 400;
@@ -41,14 +59,28 @@ margin-right: 50px;
 }
 
 .footer__contacts{
-    padding-top: 20px;
+    margin-bottom: 20px;
+    @include mq(desktop) {
+                padding-top: 20px;
+                margin-bottom: 0;
+        }
 
 }
 .footer__contacts-list{
     display: flex;
+    flex-direction: column;
+        align-items: center;
+    
+        @include mq(desktop) {
+            flex-direction: row;
+            justify-content: center;
+        }
 }
 .footer__contacts-item:not(:last-child){
-    margin-right: 50px;
+    margin-bottom: 20px;
+    @include mq(desktop) {
+    margin-right: 50px;   
+margin-bottom: 0;     }
 }
 
 .footer__contacts-txt{
@@ -56,6 +88,10 @@ margin-right: 50px;
         font-size: 16px;
         line-height: 1.5;
         color: $accent-txt;
+                text-align: center;
+                
+        @include mq(desktop) {
+        text-align: left;            }
 }
 
 .footer__contacts-link{
@@ -68,15 +104,29 @@ font-weight: 400;
 
 .social-footer{
     display: flex;
+    flex-direction: column;
+        align-items: center;
+        @include mq(desktop) {
     justify-content: space-between;
-    margin-top: 20px;
+        margin-top: 20px;            }
     
 }
 .social-footer__list{
     display: flex;
+    margin-bottom: 40px;
+    @include mq (desktop) {
+    margin-bottom: 0;        }
 }
 .social-footer__item:not(:last-child){
 margin-right: 20px;
+}
+.social__footer-icon{
+width: 40px;
+height: 40px;
+ @include mq (desktop){
+    width: 30px;
+    height: 30px;
+ }
 }
 .footer__txt{
     font-weight: 400;

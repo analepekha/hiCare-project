@@ -1,12 +1,19 @@
 .feedback__list {
     display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-        grid-gap: 40px;
+        grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+        grid-gap: 20px;
         margin-left: auto;
         margin-right: auto;
+
+    @include mq(desktop){
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 40px;
+    }
+    
 }
 
 .feedback__item{
-    height: 330px;
+
+    // height: 330px;
 border: 1px solid #95824A;
 }
