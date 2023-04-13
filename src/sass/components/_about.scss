@@ -11,7 +11,8 @@
 }
 
 .about__img{
-        width: 500px;
+    @include mq(desktop) {
+        width: 500px;        }
 }
 
 .about__wrapper{
