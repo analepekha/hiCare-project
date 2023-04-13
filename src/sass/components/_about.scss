@@ -3,7 +3,7 @@
 }
 
 .about__picture{
-    width: 100%;
+    // width: 100%;
     // width: 360px;
     @include mq(desktop){
         margin-right: 60px;
@@ -12,7 +12,8 @@
 
 .about__img{
     @include mq(desktop) {
-        width: 500px;        }
+        width: 500px;  
+    height: 521px;      }
 }
 
 .about__wrapper{
@@ -29,7 +30,7 @@
     width: 100%;
     margin-bottom: 30px;
     @include mq(desktop){
-    width: 580px;
+    width: 600px;
         margin-bottom: 0;
     }
 }
