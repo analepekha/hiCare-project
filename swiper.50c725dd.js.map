@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/swiper.js"],"names":["swiper","Swiper","pagination","el","clickable"],"mappings":";AAAA,IAAIA,EAAS,IAAIC,OAAO,YAAa,CACnCC,WAAY,CACVC,GAAI,qBACJC,WAAW","file":"swiper.50c725dd.js","sourceRoot":"../src","sourcesContent":["let swiper = new Swiper('.mySwiper', {\n  pagination: {\n    el: '.swiper-pagination',\n    clickable: true,\n  },\n});\n"]}
