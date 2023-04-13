@@ -1,3 +1,5 @@
+@import './mobile-menu';
+
 .header {
     position: absolute;
     width: 100%;
@@ -26,6 +28,15 @@
       font-size: 24px;
       line-height: 1.45;
       color: $secondary-txt;
+      transition: 1s;
+
+      &:hover{
+         color: $accent-txt;
+         transform: scale(1.2);
+      }
+      &:focus{
+         color:$pressed-txt;
+      }
 
    @include mq(desktop){
 font-weight: 400;
@@ -59,6 +70,14 @@ font-weight: 400;
     font-size: 20px;
     line-height: 1.45;
     color: $secondary-txt;
+transition: color 250ms $cubic;
+    &:hover{
+      color: $accent-txt;
+
+    };
+    &:focus{
+      color: $pressed-txt;
+    }
  }
 
  .header__link {
@@ -71,13 +90,18 @@ display: block;
     line-height: 1.45;
     color: $secondary-txt;
     padding: 9px 20px;
-    border: 1px solid #F8F6F1;
-
+    border: 1px solid $background-main;
+transition: background-color 250ms $cubic;
     margin-left: auto;
+
+    &:hover{
+      background-color: $background-hover-color;
+      border: 1px solid $background-hover-color;
+    }
    }
  }
 
- .header__menu-btn{
+ .mobile__menu-open{
    display: flex;
       margin-left: auto;
       padding: 0;

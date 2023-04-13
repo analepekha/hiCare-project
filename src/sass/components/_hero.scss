@@ -100,6 +100,17 @@
     padding: 12px 0;
         text-align: center;
         border: 1px solid $secondary-txt;
+        transition: background-color 250ms $cubic;
+
+        &:hover{
+            background-color: $background-hover-color;
+        border: 1px solid $background-hover-color;
+        }
+
+        &:focus{
+            background-color: $background-pressed-color;
+                border: 1px solid $background-pressed-color;
+        }
 
         @include mq(desktop){
     font-size: 22px;

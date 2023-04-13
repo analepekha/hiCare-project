@@ -16,7 +16,6 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    const blockScroll = () => (document.body.style.overflow = 'hidden');
     refs.modal.classList.toggle('is-hidden');
   }
 })();

@@ -45,6 +45,19 @@ height: 58px;
         padding: 13.5px 78px;
         border: 1px solid $primary-txt;
         color: $primary-txt;
+        transition: all 250ms $cubic;
+
+        &:hover{
+            background-color: $background-hover-color;
+            border: 1px solid $background-hover-color;
+            color: $secondary-txt;
+        }
+
+        &:focus{
+            background-color: $background-pressed-color;
+                border: 1px solid $background-pressed-color;
+                color: $secondary-txt;
+        }
 
 }
 

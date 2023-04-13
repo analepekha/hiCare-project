@@ -23,7 +23,16 @@
         
         text-align: center;
         display: block;
+        transition: 1s;
 
+        &:hover {
+                color: $accent-txt;
+                transform: scale(1.2);
+            }
+        
+            &:focus {
+                color: $pressed-txt;
+            }
 }
 
 .nav__footer{
@@ -58,6 +67,14 @@ margin-bottom: 0;     }
         line-height: 1.5;
 
         color:$secondary-txt;
+transition: color 250ms $cubic;
+        &:hover{
+            color:$accent-txt;
+        }
+
+        &:focus{
+            color: $pressed-txt;
+        }
 }
 
 .footer__contacts{
@@ -101,6 +118,15 @@ font-weight: 400;
     line-height: 1.5;
 
     color:$secondary-txt;
+    transition: color 250ms $cubic;
+
+    &:hover {
+            color: $accent-txt;
+        }
+    
+        &:focus {
+            color: $pressed-txt;
+        }
 }
 
 .social-footer{
@@ -125,6 +151,11 @@ margin-right: 20px;
 .social__footer-icon{
 width: 40px;
 height: 40px;
+transition: 1s;
+&:hover{
+    transform: scale(1.2);
+
+}
  @include mq (desktop){
     width: 30px;
     height: 30px;
