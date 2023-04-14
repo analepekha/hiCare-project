@@ -1,22 +1,23 @@
 
 
-.backdrop {
+.overlay {
     position: fixed;
     // top: 0;
     // left: 50%;
     top: 0px;
         left: 0px;
     // transform: translateX(-50%);
-    z-index: 100;
+    // z-index: 100;
     width: 100%;
         height: 100%;
         display: flex;
         overflow: hidden scroll;
     background: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    visibility: visible;
     pointer-events: initial;
     transition: opacity 250ms linear, visibility 250ms linear;
+
+    opacity: 0;
+        visibility: hidden;
 
 //     position: fixed;
 //         top: 0;
@@ -36,11 +37,11 @@
 //         padding: 30px 0;
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
+// .backdrop.is-hidden {
+//     opacity: 0;
+//     visibility: hidden;
+//     pointer-events: none;
+// }
 
 .modal__wrap{
     flex-shrink: 0;
@@ -55,10 +56,10 @@
 }
 
 .modal{
-    width: 960px;
-    padding: 50px;
+    width: 320px;
+    padding: 20px;
     background-color: $background-main;
-position: absolute;
+// position: absolute;
     // top: 50%;
     // left: 50%;
     margin-top: 20px;
@@ -74,6 +75,26 @@ position: absolute;
     transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
         transform: scale(1);
         // opacity: 0;
+        display: none;
+
+        @include mq(desktop){
+            width: 960px;
+            padding: 50px;
+        }
+}
+
+.modal.active{
+    display: block;
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+        z-index: 30;
+}
+
+.overlay.active{
+    opacity: 1;
+        visibility: visible;
 }
 
 .modal__btn{
@@ -81,22 +102,31 @@ position: absolute;
     height: 20px;
     position: absolute;
     top: 20px;
-    right: 25px;
+    right: 20px;
 }
 .modal__icon{
     max-width: 20px;
 }
 .modal__wrapper{
     display: flex;
+    flex-direction: column;
+
+    @include mq(desktop){
+        flex-direction: row;
+    }
     
 }
 .modals__img{
     width: 370px;
 }
 .modal__wrapper-info{
-    margin-left: 40px;
+
+    @include mq (desktop){
+margin-left: 40px;
     width: 450px;
     margin-bottom: 20px;
+    }
+    
 }
 
 .modal__subtitle{

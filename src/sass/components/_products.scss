@@ -46,6 +46,7 @@ height: 58px;
         border: 1px solid $primary-txt;
         color: $primary-txt;
         transition: all 250ms $cubic;
+        outline: none;
 
         &:hover{
             background-color: $background-hover-color;

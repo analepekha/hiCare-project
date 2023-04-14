@@ -24,7 +24,7 @@
         </picture>
         <h3 class="item__title">Шампунь зміцнюючий HiCare</h3>
         <p class="item__price">205 грн</p>
-        <button class="item__btn" data-modal-open>Детальніше</button>
+        <button class="item__btn js-open-modal" data-modal="1">Детальніше</button>
       </li>
       <li class="products__item">
         <picture>
@@ -48,7 +48,7 @@
         </picture>
         <h3 class="item__title">Маска для волосся HiCare</h3>
         <p class="item__price">185 грн</p>
-        <button class="item__btn">Детальніше</button>
+        <button class="item__btn js-open-modal" data-modal="2" >Детальніше</button>
       </li>
       <li class="products__item">
         <picture>
@@ -72,7 +72,7 @@
         </picture>
         <h3 class="item__title">Скраб для шкіри голови HiCare</h3>
         <p class="item__price">290 грн</p>
-        <button class="item__btn">Детальніше</button>
+        <button class="item__btn js-open-modal" data-modal="3" >Детальніше</button>
       </li>
       <li class="products__item">
         <picture>
@@ -96,10 +96,13 @@
         </picture>
         <h3 class="item__title">Пінка для вмивання HiCare</h3>
         <p class="item__price">195 грн</p>
-        <button class="item__btn">Детальніше</button>
+        <button class="item__btn js-open-modal" data-modal="4">Детальніше</button>
       </li>
     </ul>
   </div>
+
+
+  <!-- //Swiper// -->
 
   <div class=" container swiper mySwiper">
     <div class="swiper-wrapper">
@@ -111,7 +114,7 @@
         <h3 class="item__title">Шампунь зміцнюючий HiCare</h3>
         <p class="item__price">205 грн</p>
         </div>
-        <button class="item__btn">Детальніше</button>
+        <button class="item__btn js-open-modal" data-modal="1" >Детальніше</button>
       </div>
       <div class="swiper-slide">
         <img class="products__img" srcset="/images/products/products-2_sm.jpg 1x,
@@ -121,7 +124,7 @@
           <h3 class="item__title">Маска для волосся HiCare</h3>
           <p class="item__price">185 грн</p>
           </div>
-          <button class="item__btn">Детальніше</button>
+          <button class="item__btn js-open-modal" data-modal="2">Детальніше</button>
       </div>
       <div class="swiper-slide">
         <img class="products__img" srcset="/images/products/products-3_sm.jpg 1x,
@@ -132,7 +135,7 @@
                   <p class="item__price">290 грн</p>
                                     </div>
 
-                  <button class="item__btn">Детальніше</button>
+                  <button class="item__btn js-open-modal" data-modal="3">Детальніше</button>
       </div>
           <div class="swiper-slide">
             <img class="products__img" srcset="/images/products/products-4_sm.jpg 1x,
@@ -143,11 +146,14 @@
                       <h3 class="item__title">Пінка для вмивання HiCare</h3>
                       <p class="item__price">195 грн</p>
                       </div>
-                      <button class="item__btn">Детальніше</button>
+                      <button class="item__btn js-open-modal" data-modal="4">Детальніше</button>
                       
           </div>
     </div>
     <div class="swiper-pagination">
     </div>
   </div>
+
+  <div class=" overlay is-hidden js-overlay-modal " id="overlay-modal"></div>
+
 </section>

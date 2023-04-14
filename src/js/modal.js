@@ -1,21 +1,180 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-modal-open]'),
+//     closeModalBtn: document.querySelector('[data-modal-close]'),
+//     modal: document.querySelector('[data-modal]'),
+//   };
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      toggleModal();
-    }
+//   document.addEventListener('keydown', function (e) {
+//     if (e.key === 'Escape') {
+//       //ваша функция закрытия окна
+//       toggleModal();
+//     }
+//   });
+
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//     refs.modalS.classList.toggle('is-hidden');
+//   }
+// })();
+
+// const btnArray = document.querySelectorAll('.js-open-modal');
+// const overlay = document.querySelector('.js-modal-overlay');
+// const crossArray = document.querySelectorAll('.js-modal-close');
+
+// btnArray.forEach(function (item) {
+//   item.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const modalName = this.getAttribute('data-modal');
+//     const modal = document.querySelector('.js-modal[data-modal="' + modalName + '"]');
+//     console.log(modal);
+//     console.log(modalName);
+
+//     modal.classList.add('is-show');
+//     overlay.classList.add('is-show');
+//   });
+// });
+
+// crossArray.forEach(function (cross) {
+//   cross.addEventListener('click', function () {
+//     console.log(2);
+//     const parent = this.parentNode;
+//     parent.classList.remove('is-show');
+//     overlay.classList.remove('is-show');
+//   });
+// });
+
+!(function (e) {
+  'function' != typeof e.matches &&
+    (e.matches =
+      e.msMatchesSelector ||
+      e.mozMatchesSelector ||
+      e.webkitMatchesSelector ||
+      function (e) {
+        for (
+          var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0;
+          o[n] && o[n] !== t;
+
+        )
+          ++n;
+        return Boolean(o[n]);
+      }),
+    'function' != typeof e.closest &&
+      (e.closest = function (e) {
+        for (var t = this; t && 1 === t.nodeType; ) {
+          if (t.matches(e)) return t;
+          t = t.parentNode;
+        }
+        return null;
+      });
+})(window.Element.prototype);
+
+document.addEventListener('DOMContentLoaded', function () {
+  /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+  var modalButtons = document.querySelectorAll('.js-open-modal'),
+    overlay = document.querySelector('.js-overlay-modal'),
+    closeButtons = document.querySelectorAll('.js-modal-close');
+
+  /* Перебираем массив кнопок */
+  modalButtons.forEach(function (item) {
+    /* Назначаем каждой кнопке обработчик клика */
+    item.addEventListener('click', function (e) {
+      /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+      e.preventDefault();
+
+      /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+      var modalId = this.getAttribute('data-modal'),
+        modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+      console.log(modalId);
+      console.log(modalElem);
+      /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+      modalElem.classList.add('active');
+      overlay.classList.add('active');
+    }); // end click
+  }); // end foreach
+
+  closeButtons.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      var parentModal = this.closest('.modal');
+      console.log(parentModal);
+      parentModal.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  }); // end foreach
+
+  document.body.addEventListener(
+    'keyup',
+    function (e) {
+      var key = e.keyCode;
+
+      if (key == 27) {
+        document.querySelector('.modal.active').classList.remove('active');
+        document.querySelector('.overlay').classList.remove('active');
+      }
+    },
+    false,
+  );
+
+  overlay.addEventListener('click', function () {
+    document.querySelector('.modal.active').classList.remove('active');
+    overlay.classList.remove('active');
   });
+}); // end ready
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+// !(function (e) {
+//   'function' != typeof e.matches &&
+//     (e.matches =
+//       e.msMatchesSelector ||
+//       e.mozMatchesSelector ||
+//       e.webkitMatchesSelector ||
+//       function (e) {
+//         for (
+//           var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0;
+//           o[n] && o[n] !== t;
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+//         )
+//           ++n;
+//         return Boolean(o[n]);
+//       }),
+//     'function' != typeof e.closest &&
+//       (e.closest = function (e) {
+//         for (var t = this; t && 1 === t.nodeType; ) {
+//           if (t.matches(e)) return t;
+//           t = t.parentNode;
+//         }
+//         return null;
+//       });
+// })(window.Element.prototype);
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const modalButtons = document.querySelectorAll('.js-open-modal');
+//   const overlay = document.querySelector('#overlay-modal');
+//   const closeButtons = document.querySelector('.js-modal-close');
+
+//   modalButtons.forEach(function (item) {
+//     item.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       var modalId = this.getAttribute('data-modal'),
+//         modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+//       modalElem.classList.add('active');
+//       overlay.classList.add('active');
+//     }); // end click
+//   }); // end foreach
+
+//   closeButtons.forEach(function (item) {
+//     item.addEventListener('click', function (e) {
+//       console.log(this.closest('.modal'));
+//     });
+//   });
+// }); // end ready
+
+// // end foreach
