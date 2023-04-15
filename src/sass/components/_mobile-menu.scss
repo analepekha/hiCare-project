@@ -1,4 +1,5 @@
 .mobile-menu {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -27,6 +28,10 @@
         height: 100%;
         width: 40%;
     }
+}
+
+.mobile-menu.is-open{
+    display: block;
 }
 
 .mobile-menu__close {
