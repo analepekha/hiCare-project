@@ -164,13 +164,28 @@ transition: 1s;
         font-size: 16px;
         line-height: 1.5;
         color:$secondary-txt;
-        opacity: 0.8;
 
         &:hover{
             color:$accent-txt;
         }
         &:focus{
             color:$pressed-txt;
+        }
+}
+
+.footer__link-contract{
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $secondary-txt;
+        opacity: 0.8;
+    
+        &:hover {
+            color: $accent-txt;
+        }
+    
+        &:focus {
+            color: $pressed-txt;
         }
 }
 
