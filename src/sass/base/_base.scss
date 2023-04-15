@@ -5,10 +5,12 @@ body {
 }
 
 .section {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     @include mq (desktop){
-        padding-top: 180px;
+            padding-top: 90px;
+                padding-bottom: 90px;
     }
 }
 
