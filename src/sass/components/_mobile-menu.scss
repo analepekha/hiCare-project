@@ -21,13 +21,10 @@
 
     @media screen and (min-width: 768px) {
         height: 100%;
-        width: 35%;
+           width: 50%;
+
     }
 
-    @media screen and (min-width: 1001px) {
-        height: 100%;
-        width: 40%;
-    }
 }
 
 .mobile-menu.is-open{
@@ -43,10 +40,10 @@
     // transition: fill 250ms $cubic;
     // fill: $background-button--white-color;
 
-    &:hover,
-    &:focus {
-        // fill: $hover-button--red-color;
-    }
+    &:hover {
+            background-color: $accent-txt;
+            border-radius: 50%;
+        }
 
     @media screen and (min-width: 768px) {
         right: 32px;
@@ -71,10 +68,7 @@
     outline: none;
     // transition: background $cubic;
 
-    &:hover,
-    &:focus {
-        // background: $hover-button--white-color;
-    }
+    
 
     @media screen and (min-width: 768px) {
         min-width: 186px;
@@ -150,7 +144,11 @@ display: block;
                     background-color: $background-pressed-color;
                     border: 1px solid $background-pressed-color;
                 }
-
+@include mq(tablet-only){
+    width:320px;
+    margin-right: auto;
+    margin-left: auto;
+}
 }
 
 .header__logo-mobile{

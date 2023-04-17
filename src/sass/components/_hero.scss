@@ -154,21 +154,18 @@
         line-height: 1.5;
     color: $secondary-txt;
     text-align: center;
+
+    @include mq(tablet){
+        font-size: 32px;
+            line-height: 1.04;
+    }
     @include mq(desktop) {
             font-size: 48px;
-            line-height: 1.04;
     
             margin-bottom: 30px;
         }
-    // padding: 20px;
-    // font-family: 'Roboto', sans-serif;
 }
 
 .dud-text {
     color: $secondary-txt;}
 
-// .hero__wrap{
-//     position: relative;
-//     width: 320px;
-
-// }
