@@ -7,12 +7,12 @@
 
             <form class="partnership__form" id="my-form" action="https://formspree.io/f/xrgvonoj" method="POST" >
                 <input name="subject" type="hidden" value="Нова заявка на партнерство" />
-                <input class="partnership__input _req" type="text" name="ПІБ" placeholder="Ім’я та прізвище" >
-                <input class="partnership__input" type="text" name="Місто" placeholder="Місто" >
-                <input class="partnership__input" type="number" name="Номер телефону" id="" placeholder="Номер телефону" >
-                <input class="partnership__input _req _email" type="email" name="Email" id="" placeholder="Email" >
-                <select class="js-choice" name="Дані про магазин"  >
-                    <option value="">Дані про ваш магазин</option>
+                <input class="partnership__input _req" type="text" name="ПІБ" placeholder="Ім’я та прізвище" required >
+                <input class="partnership__input" type="text" name="Місто" placeholder="Місто" required >
+                <input class="partnership__input" type="number" name="Номер телефону" placeholder="Номер телефону" required>
+                <input class="partnership__input _req _email" type="email" name="Email"  placeholder="Email" required>
+                <select class="js-choice" name="Дані про магазин"  required>
+                    <option value=" ">Дані про ваш магазин</option>
                     <option value="Інстаграм">Інстаграм</option>
                     <option value="Свій сайт">Свій сайт</option>
                     <option value="Prom">Prom</option>
