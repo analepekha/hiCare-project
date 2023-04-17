@@ -11,6 +11,9 @@
 }
 
 .about__img{
+    @include mq(tablet){
+        width: 100%
+    }
     @include mq(desktop) {
         width: 500px;  
     height: 521px;      }

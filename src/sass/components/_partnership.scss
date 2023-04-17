@@ -63,6 +63,16 @@ padding: 13px 30px;
         color: rgb(18, 18, 17, 0.7);
 }
 
+.partnership__input:hover{
+        border: 1px solid $accent-txt;
+
+}
+
+.partnership__input:focus{
+    border: 1px solid $pressed-txt;
+
+}
+
 .partnership__option{
     width: 500px;
     background-color: $background-main;
@@ -190,12 +200,17 @@ font-weight: 400;
     padding: 0;
         color: rgb(18, 18, 17, 0.7);
 }
-.is-open .choices__inner,
-.is-focused .choices__inner{
+.is-open .choices__inner{
         border-radius: 0;
     border: 1px solid rgb(18, 18, 17, 0.7);
 }
-
+.choices__inner:hover{
+border: 1px solid $accent-txt;
+}
+.is-focused .choices__inner {
+    border-radius: 0;
+    border: 1px solid $accent-txt;
+}
 .choices[data-type*=select-one] .choices__inner {
     padding-bottom: 13px;
 }
@@ -255,4 +270,16 @@ padding-right: 30px;
 .choices__list--dropdown .choices__placeholder{
     display: none;
 }
-
+.form__status{
+    display: none;
+}
+._status{ 
+    display: flex;
+justify-content: center;
+font-weight: 400;
+    font-size: 20px;
+    line-height: 1.45;
+    width: 100%;
+        padding: 13px 30px;
+        margin-top: 10px;
+}

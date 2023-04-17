@@ -5,6 +5,7 @@
 
     @include mq(tablet) {
         max-width: 768px;
+        padding: 0 60px;
     }
 
     @include mq(desktop) {

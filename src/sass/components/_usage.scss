@@ -25,7 +25,12 @@ margin-bottom: 0;
         margin-right: 60px;
     }
 }
-
+.usage__video-wrapper{
+    @include mq(tablet-only){
+        display: flex;
+            justify-content: center;
+    }
+}
 .usage__video{
     background-color: #D9D9D9;
             outline: $pressed-txt;

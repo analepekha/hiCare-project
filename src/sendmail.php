@@ -2,18 +2,18 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+ini_set("include_path", '/home/hicareco/php:' . ini_get("include_path") );
+require 'PHPMailer-6.8.0/src/Exception.php';
+require 'PHPMailer-6.8.0/src/PHPMailer.php';
+require 'PHPMailer-6.8.0/src/SMTP.php';
 
 $mail=new PHPMailer(true);
 $mail->CharSet='UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
-$mail->setFrom('partnership@hicare.com.ua', 'Клієнт');
-$mail->addAddress('business@hicare.com.ua');
+$mail->setFrom('anastasiia.lepekha@gmail.com', 'Клієнт');
+$mail->addAddress('maiboroda0103@gmail.com');
 $mail->Subject = 'Новий запит на партнерство';
 
 $body = '<h1> Новий запит на партнерство </h1>'

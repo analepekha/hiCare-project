@@ -9,16 +9,41 @@
 }
 
 .inst__list{
-    display: grid;
-    margin-left: auto;
-        margin-right: auto;
-        grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
-            grid-gap: 30px;
+    display: flex;
+    flex-direction: column;
+
+    
+    // display: grid;
+    // margin-left: auto;
+    //     margin-right: auto;
+    //     grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+    //         grid-gap: 30px;
+
+            @include mq(tablet-only){
+                display: flex;
+                    flex-direction: column;
+                    align-items: center;
+            }
+
     @include mq(desktop){
+        display: grid;
+        margin-left: auto;
+            margin-right: auto;
 grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     grid-gap: 40px;
     }
         
        
 }
-
+.inst__item{
+    &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    @include mq(mobile-only){
+    width: 320px;
+    }
+}
+.inst__item.instagram-media{
+    margin: 0;
+    min-width: 320px
+}

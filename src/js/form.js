@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
@@ -12,9 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let formData = new FormData(form);
     console.log(formData);
 
+    for (var key of formData.keys()) {
+      console.log(key, formData.get(key));
+    }
+
     if (error === 0) {
       form.classList.add('_sending');
-      let response = await fetch('sendmail.php', {
+      let response = await fetch('./sendmail.php', {
         method: 'POST',
         body: formData,
       });

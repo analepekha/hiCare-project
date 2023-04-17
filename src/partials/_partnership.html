@@ -5,20 +5,22 @@
             </h2>
                     <div class="partnership__wrapper">
 
-            <form class="partnership__form" id='form' action="#">
-                <input class="partnership__input " type="text" name="name" placeholder="Ім’я та прізвище" >
-                <input class="partnership__input _req" type="text" name="city" placeholder="Місто" >
-                <input class="partnership__input _req" type="number" name="number" id="" placeholder="Номер телефону" >
-                <input class="partnership__input _req _email" type="email" name="email" id="" placeholder="Email" >
-                <select class="js-choice _req" name="data" >
+            <form class="partnership__form" id="my-form" action="https://formspree.io/f/xrgvonoj" method="POST" >
+                <input name="subject" type="hidden" value="Нова заявка на партнерство" />
+                <input class="partnership__input _req" type="text" name="ПІБ" placeholder="Ім’я та прізвище" >
+                <input class="partnership__input" type="text" name="Місто" placeholder="Місто" >
+                <input class="partnership__input" type="number" name="Номер телефону" id="" placeholder="Номер телефону" >
+                <input class="partnership__input _req _email" type="email" name="Email" id="" placeholder="Email" >
+                <select class="js-choice" name="Дані про магазин"  >
                     <option value="">Дані про ваш магазин</option>
-                    <option value="inst">Інстаграм</option>
-                    <option value="website">Свій сайт</option>
-                    <option value="prom">Prom</option>
-                    <option value="shop">Фізичний магазин</option>
-                    <option value="other">Інше</option>
+                    <option value="Інстаграм">Інстаграм</option>
+                    <option value="Свій сайт">Свій сайт</option>
+                    <option value="Prom">Prom</option>
+                    <option value="Фізичний магазин">Фізичний магазин</option>
+                    <option value="Інше">Інше</option>
                 </select>
-                <button class="form__btn" type="submit">Відправити</button>
+                <button class="form__btn" type="submit" id="my-form-button">Відправити</button>
+                <p class='form__status 'id="my-form-status"></p>
             </form>
             <div class="partnership__info">
             <h3 class="partnership__subtitle">Ми відкриті до співпраці з інтернет-магазинами, інста-шопами, фізичними
