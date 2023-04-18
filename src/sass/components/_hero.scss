@@ -219,7 +219,7 @@
     /* ширина элемента */
     width: 60px;
     /* высота элемента */
-    height: 50px;
+    height: 60px;
     z-index: 30;
 }
 
@@ -231,6 +231,11 @@
     border-radius: 50%;
     background-size: 100% 100%;
     background-image: url('../images/icons/up.svg');
+
+    @include mq(desktop){
+            width: 60px;
+                height: 60px;
+    }
 }
 
 .btn-up_hide {

@@ -1,10 +1,12 @@
     <div class="modal js-modal" data-modal="2">
         <div class="modal-info__container ">
-        <button class="modal__btn js-modal-close" type="button" >
-            <img class='modal__icon' src="./images/icons/btn-close.svg" alt="" width="20" height="20" />
-        </button>
+        <div class="modal__cross active js-modal-close" >
+            <span class="modal__line"></span>
+            <span class="modal__line"></span>
+            <span class="modal__line"></span>
+        </div>
         <div class="modal__wrapper">
-            <picture>
+            <picture class="modal__picture">
                 <source srcset="images/modals/modal-2_lg.webp 1x,
          images/modals/modal-2_lg@2x.webp 2x" media="(min-width: 1160px)" type="image/webp" />
                 <source srcset="images/modals/modal-2_lg.jpg 1x, 
@@ -13,8 +15,11 @@
                     height="466" />
             </picture>
             <div class="modal__wrapper-info">
-                <h2 class="modal__subtitle">Маска для волосся HiCare</h2>
-                <p class="modal__price">185 грн</p>
+                <div class="modal__wrapper-logo">
+                    <h2 class="modal__subtitle">Маска для волосся</h2>
+                    <p class="modal__logoname">HiCare</p>
+                </div>
+                                <p class="modal__price">185 грн</p>
                 <p class="modal__txt"><span class="modal__txt-span">Склад:</span> вода підготовлена, цетилстеариловий спирт, цетеарет-20, олія крамбе, цетрімоніум хлорид, бегетрімоніум хлорид, гліцерин,
                 гідролізат протеїнів пивних дріжжей, екстракт червоних водоростей, гідролізат протеїнів шовку, гідролізат протеїнів
                 пшениці, кераміди рослинні, вітаміни В6, Е, РР, молочна кислота, феноксіетанол, етілгексілгліцерин, віддушка.
@@ -24,9 +29,9 @@
 
             </div>
         </div>
-        <p class="modal__txt"><span class="modal__txt-span">Опис товару:</span>Маска для волосся з олією крамбе, гідролізатом протеїнів шовку та пшениці.
+        <p class="modal__txt"><span class="modal__txt-span">Опис товару:</span> Маска для волосся з олією крамбе, гідролізатом протеїнів шовку та пшениці.
         Крамбе (абіссінська гірчиця) — це рослина, яка містить в собі високу концентрацію ліпідів та олій, які допомагають
-        зберегти вологу в кінчиках волосся та роблять його більш м'яким та еластичним.
+        зберегти вологу в кінчиках волосся та роблять його більш м'яким та еластичним.<br>
         Гідролізат протеїнів шовку та пшениці насичує волосся амінокислотами, які відновлюють його структуру та регенерують
         пошкодження.
 </p>

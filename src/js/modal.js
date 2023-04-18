@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
             и будем искать модальное окно с таким же атрибутом. */
       var modalId = this.getAttribute('data-modal'),
         modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-      console.log(modalId);
-      console.log(modalElem);
       /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');

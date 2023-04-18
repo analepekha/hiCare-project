@@ -13,7 +13,6 @@
 
 const menuBtn = document.querySelector('#hamb');
 const mobileMenuRef = document.querySelector('[data-header-menu]');
-const menuBtnClose = document.querySelector('[data-menu-close]');
 const body = document.body;
 
 menuBtn.addEventListener('click', menuOpenHandler);
