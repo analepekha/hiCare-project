@@ -242,9 +242,9 @@
     display: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .btn-up:hover {
-    background-color: $background-hover-color;   
-        border-radius: 50%;     /* цвет заднего фона при наведении */
-    }
-}
+// @media (hover: hover) and (pointer: fine) {
+//     .btn-up:hover {
+//     // background-color: $background-hover-color;   
+//         border-radius: 50%;     /* цвет заднего фона при наведении */
+//     }
+// }
