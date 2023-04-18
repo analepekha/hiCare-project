@@ -97,22 +97,50 @@
     }
 }
 
+.hero__wrapper-title{
+    display: flex;
+    flex-direction: column;
+            margin-bottom: 20px;
+
+    @include mq(tablet){
+        flex-direction: row;
+    }
+        @include mq(desktop) {
+            margin-bottom: 30px;
+        }
+}
+
 .hero__title{
     font-weight: 400;
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1.5;
                         color: $secondary-txt;
-                        margin-bottom: 20px;
         @include mq(tablet){
             font-size: 32px;
                     line-height: 1.04;
+                                            margin-right: 10px;
         }
         @include mq(desktop){
-            font-size: 48px;
-                line-height: 1.04;
-            
-                margin-bottom: 30px;
+            font-size: 48px;            
         }
+}
+
+.hero__title-txt{
+    font-weight: 400;
+        font-size: 32px;
+        line-height: 1.5;
+        color: $secondary-txt;
+        margin-left: auto;
+
+        @include mq(tablet) {
+                font-size: 32px;
+                line-height: 1.04;
+                margin-left: 0;
+            }
+        
+            @include mq(desktop) {
+                font-size: 48px;
+            }
 }
 
 .hero__link{
@@ -150,7 +178,7 @@
 
 .scramble-text {
     font-weight: 400;
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1.5;
     color: $secondary-txt;
     text-align: center;
@@ -169,3 +197,48 @@
 .dud-text {
     color: $secondary-txt;}
 
+.btn-up {
+    /* фиксированное позиционирование */
+    position: fixed;
+    /* цвет фона */
+    // background-color: $background-hover-color;
+    /* расстояние от правого края окна браузера */
+    right: 20px;
+    /* расстояние от нижнего края окна браузера */
+    bottom: 20px;
+    /* скругление верхнего левого угла */
+    /* скругление верхнего правого угла */
+    /* вид курсора */
+    cursor: pointer;
+    /* отображение элемента как flex */
+    display: flex;
+    /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+    align-items: center;
+    /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+    justify-content: center;
+    /* ширина элемента */
+    width: 60px;
+    /* высота элемента */
+    height: 50px;
+    z-index: 30;
+}
+
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: $background-main no-repeat center center;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    background-image: url('../images/icons/up.svg');
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+    background-color: $background-hover-color;        /* цвет заднего фона при наведении */
+    }
+}

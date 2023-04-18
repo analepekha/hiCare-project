@@ -7,6 +7,14 @@
     }
 
 }
+
+.partnership__info{
+    @include mq(desktop){
+        display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    }
+}
 .partnership__form {
     display: flex;
     flex-direction: column;
@@ -115,6 +123,7 @@ transition: all 250ms $cubic;
         margin-bottom: 10px;
          @include mq(desktop){
                     font-size: 30px;
+                            margin-bottom: 0px;
          }
 }
 
@@ -124,7 +133,8 @@ font-size: 20px;
 line-height: 1.45;
 margin-bottom: 20px;
 @include mq(desktop) {
-margin-bottom: 30px;    }
+// margin-bottom: 0; 
+   }
 }
 .contacts__list{
     display: flex;

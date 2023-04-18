@@ -35,12 +35,15 @@
     @include mq(desktop){
     width: 600px;
         margin-bottom: 0;
-    }
+        display: flex;
+            flex-direction: column;
+justify-content: space-between;    }
 }
+
 .about__info:not(:last-child){
     margin-bottom: 30px;
     @include mq(desktop){
-    margin-bottom: 20px;
+    // margin-bottom: 50px;
     }
 }
 
