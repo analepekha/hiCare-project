@@ -4,12 +4,14 @@
         <div class="orders__wrapper">
             <div class="orders__wrapper-txt">
                         <h3 class="orders__subtitle">Закохались у наш продукт?</h3>
-                        <form class="orders__form">
-                <input class="orders__input _req" type="text" name="ПІБ" placeholder="Ім’я та прізвище" required>
-                <input class="orders__input" type="number" name="Номер телефону" placeholder="Номер телефону" required>
+                        <form class="orders__form" enctype="multipart/form-data" method="post" id="form-order"  action="orderForm.php">
+                <input class="orders__input _req" type="text" name="name" placeholder="Ім’я та прізвище" required>
+                <input class="orders__input" type="number" name="phone" placeholder="Номер телефону" required>
                             <button class="orders__btn" type="submit" id="">Хочу замовити</button>
-
+                                        <p class='form__status ' id="order-status"></p>
+                           
                         </form>
+
 
             </div>
         <picture>

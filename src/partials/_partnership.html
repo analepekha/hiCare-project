@@ -5,13 +5,13 @@
             </h2>
                     <div class="partnership__wrapper">
 
-            <form class="partnership__form" id="my-form" action="https://formspree.io/f/xrgvonoj" method="POST" >
+            <form class="partnership__form" enctype="multipart/form-data" method="post" id="form-partner"  action="partnerForm.php" >
                 <input name="subject" type="hidden" value="Нова заявка на партнерство" />
-                <input class="partnership__input _req" type="text" name="ПІБ" placeholder="Ім’я та прізвище" required >
-                <input class="partnership__input" type="text" name="Місто" placeholder="Місто" required >
-                <input class="partnership__input" type="number" name="Номер телефону" placeholder="Номер телефону" required>
-                <input class="partnership__input _req _email" type="email" name="Email"  placeholder="Email" required>
-                <select class="js-choice" name="Дані про магазин"  required>
+                <input class="partnership__input _req" type="text" name="name" placeholder="Ім’я та прізвище" required >
+                <input class="partnership__input" type="text" name="city" placeholder="Місто" required >
+                <input class="partnership__input" type="number" name="phone" placeholder="Номер телефону" required>
+                <input class="partnership__input _req _email" type="email" name="email"  placeholder="Email" required>
+                <select class="js-choice" name="other" >
                     <option value=" ">Дані про ваш магазин</option>
                     <option value="Інстаграм">Інстаграм</option>
                     <option value="Свій сайт">Свій сайт</option>
@@ -20,7 +20,7 @@
                     <option value="Інше">Інше</option>
                 </select>
                 <button class="form__btn" type="submit" id="my-form-button">Відправити</button>
-                <p class='form__status 'id="my-form-status"></p>
+                <p class='form__status 'id="partner-status"></p>
             </form>
             <div class="partnership__info">
             <h3 class="partnership__subtitle">Ми відкриті до співпраці з інтернет-магазинами, інста-шопами, фізичними магазинами, концепт-сторами, шоу-румами.</h3>

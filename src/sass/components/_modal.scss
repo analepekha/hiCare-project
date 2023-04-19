@@ -208,7 +208,10 @@ display: none;
     }
 }
 .modals__img{
+    @include mq (desktop){
     width: 370px;
+    height: 466px;
+    }
 }
 .modal__wrapper-info{
 

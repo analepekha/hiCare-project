@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
   closeButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
       var parentModal = this.closest('.modal');
-      console.log(parentModal);
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
       body.classList.remove('unscroll');

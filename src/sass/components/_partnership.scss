@@ -284,6 +284,8 @@ padding-right: 30px;
     display: none;
 }
 ._status{ 
+    position: absolute;
+    bottom: -60px;
     display: flex;
 justify-content: center;
 font-weight: 400;
@@ -291,5 +293,5 @@ font-weight: 400;
     line-height: 1.45;
     width: 100%;
         padding: 13px 30px;
-        margin-top: 10px;
+        // margin-top: 10px;
 }
