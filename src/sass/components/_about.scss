@@ -1,67 +1,64 @@
 .about {
-    padding-top: 100px ;
+  padding-top: 100px;
 }
 
-.about__picture{
-    // width: 100%;
-    // width: 360px;
-    @include mq(desktop){
-        margin-right: 60px;
-    }
+.about__picture {
+  @include mq(desktop) {
+    margin-right: 60px;
+  }
 }
 
-.about__img{
-    @include mq(tablet){
-        width: 100%
-    }
-    @include mq(desktop) {
-        width: 500px;  
-    height: 521px;      }
-}
-
-.about__wrapper{
-    display: flex;
-    flex-direction: column-reverse;
-
-    @include mq(desktop){
-            flex-direction: row;
-    }
-
-}
-
-.about__info-wrapper{
+.about__img {
+  @include mq(tablet) {
     width: 100%;
-    margin-bottom: 30px;
-    @include mq(desktop){
-    width: 600px;
-        margin-bottom: 0;
-        display: flex;
-            flex-direction: column;
-justify-content: space-between;    }
+  }
+  @include mq(desktop) {
+    width: 500px;
+    height: 521px;
+  }
 }
 
-.about__info:not(:last-child){
-    margin-bottom: 30px;
-    @include mq(desktop){
-    // margin-bottom: 50px;
-    }
+.about__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq(desktop) {
+    flex-direction: row;
+  }
+}
+
+.about__info-wrapper {
+  width: 100%;
+  margin-bottom: 30px;
+  @include mq(desktop) {
+    width: 600px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.about__info:not(:last-child) {
+  margin-bottom: 30px;
+  @include mq(desktop) {
+  }
 }
 
 .about__subtitle {
-    font-weight: 400;
-    font-size: 24px;
-        line-height: 1.45;
-                color: $accent-txt;
-                        margin-bottom: 10px;
-        @include mq (desktop){
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.45;
+  color: $accent-txt;
+  margin-bottom: 10px;
+  @include mq(desktop) {
     font-size: 30px;
-        line-height: 1.46;
-    
-        }
+    line-height: 1.46;
+  }
 }
 
-.about__txt{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.45;
+.about__txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
 }

@@ -50,15 +50,6 @@ if (!error_get_last()) {
 }else{
     $message = 'Дані відправлені';
 }
-    // if ($mail->send()) {
-    //     $data['result'] = "success";
-    //     $data['info'] = "Сообщение успешно отправлено!";
-    // } else {
-    //     $data['result'] = "error";
-    //     $data['info'] = "Сообщение не было отправлено. Ошибка при отправке письма";
-    //     $data['desc'] = "Причина ошибки: {$mail->ErrorInfo}";
-    // }
-    
 }
 $response=['message'=>$message];
 

@@ -46,13 +46,6 @@ if (!error_get_last()) {
     // Получатель письма
     $mail->addAddress('partnership@hicare.com.ua');  
     
-    // Прикрипление файлов к письму
-    // if (!empty($file['name'][0])) {
-    //     for ($i = 0; $i < count($file['tmp_name']); $i++) {
-    //         if ($file['error'][$i] === 0) 
-    //             $mail->addAttachment($file['tmp_name'][$i], $file['name'][$i]);
-    //     }
-    // }
     // Отправка сообщения
     $mail->isHTML(true);
     $mail->Subject = $title;
@@ -64,14 +57,6 @@ if (!error_get_last()) {
 }else{
     $message = 'Дані відправлені';
 }
-    // if ($mail->send()) {
-    //     $data['result'] = "success";
-    //     $data['info'] = "Сообщение успешно отправлено!";
-    // } else {
-    //     $data['result'] = "error";
-    //     $data['info'] = "Сообщение не было отправлено. Ошибка при отправке письма";
-    //     $data['desc'] = "Причина ошибки: {$mail->ErrorInfo}";
-    // }
     
 }
 $response=['message'=>$message];

@@ -1,15 +1,15 @@
 .container {
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 20px;
 
-    @include mq(tablet) {
-        max-width: 768px;
-        padding: 0 60px;
-    }
+  @include mq(tablet) {
+    max-width: 768px;
+    padding: 0 60px;
+  }
 
-    @include mq(desktop) {
-        max-width: 1440px;
-        padding: 0 140px;
-    }
+  @include mq(desktop) {
+    max-width: 1440px;
+    padding: 0 140px;
+  }
 }

@@ -1,31 +1,49 @@
 <section class="orders section">
-    <div class="container">
-        <h2 class="orders__title title">Замовити зараз</h2>
-        <div class="orders__wrapper">
-            <div class="orders__wrapper-txt">
-                        <h3 class="orders__subtitle">Закохались у наш продукт?</h3>
-                        <form class="orders__form" enctype="multipart/form-data" method="post" id="form-order"  action="orderForm.php">
-                <input class="orders__input _req" type="text" name="name" placeholder="Ім’я та прізвище" required>
-                <input class="orders__input" type="number" name="phone" placeholder="Номер телефону" required>
-                            <button class="orders__btn" type="submit" id="">Хочу замовити</button>
-                                        <p class='form__status ' id="order-status"></p>
-                           
-                        </form>
+  <div class="container">
+    <h2 class="orders__title title">Замовити зараз</h2>
+    <div class="orders__wrapper">
+      <div class="orders__wrapper-txt">
+        <h3 class="orders__subtitle">Закохались у наш продукт?</h3>
+        <form
+          class="orders__form"
+          enctype="multipart/form-data"
+          method="post"
+          id="form-order"
+          action="orderForm.php"
+        >
+          <input
+            class="orders__input _req"
+            type="text"
+            name="name"
+            placeholder="Ім’я та прізвище"
+            required
+          />
+          <input
+            class="orders__input"
+            type="number"
+            name="phone"
+            placeholder="Номер телефону"
+            required
+          />
+          <button class="orders__btn" type="submit" >Хочу замовити</button>
+          <p class="form__status" id="order-status"></p>
 
+        </form>
 
-            </div>
-        <picture>
-            <source
-            srcset="
-            images/orders/orders_lg.webp 1x,
-            images/orders/orders_lg@2x.webp 2x"
-            media="(min-width: 1160px)"
-            type="image/webp"/>
-            <source srcset="
-                        images/orders/orders_lg.jpg 1x,
-                        images/orders/orders_lg@2x.jpg 2x" media="(min-width: 1160px)" type="image/jpg" />
-                        <img src="/images/orders/orders_lg.jpg" alt="HiCare товар" width="600" height="286"/>
-        </picture>
-        </div>
+      </div>
+      <picture class="orders__picture">
+        <source
+          srcset="images/orders/orders_lg.webp 1x, images/orders/orders_lg@2x.webp 2x"
+          media="(min-width: 1160px)"
+          type="image/webp"
+        />
+        <source
+          srcset="images/orders/orders_lg.jpg 1x, images/orders/orders_lg@2x.jpg 2x"
+          media="(min-width: 1160px)"
+          type="image/jpg"
+        />
+        <img src="/images/orders/orders_lg.jpg" alt="HiCare товар" width="600" height="286" />
+      </picture>
     </div>
+  </div>
 </section>

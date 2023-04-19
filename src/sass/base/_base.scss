@@ -1,29 +1,30 @@
+
 body {
-    font-family: $text-font;
-    color: $primary-txt;
-    background-color: $background-main;
+  font-family: $text-font;
+  color: $primary-txt;
+  background-color: $background-main;
 }
 
 .section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-    @include mq (desktop){
-            padding-top: 90px;
-                padding-bottom: 90px;
-    }
+  @include mq(desktop) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 }
 
 .title {
-    font-weight: 400;
-        font-size: 32px;
-        line-height: 1.56;
-        margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.56;
+  margin-bottom: 40px;
 
-        @include mq(desktop){
+  @include mq(desktop) {
     font-size: 48px;
-        line-height: 1.04;
-    
-        margin-bottom: 50px;
-        }
+    line-height: 1.04;
+
+    margin-bottom: 50px;
+  }
 }

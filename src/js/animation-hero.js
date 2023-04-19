@@ -51,9 +51,7 @@ class TextScramble {
     return this.chars[Math.floor(Math.random() * this.chars.length)];
   }
 }
-// ——————————————————————————————————————————————————
-// Фразы
-// ——————————————————————————————————————————————————
+
 const phrases = ['Hi', 'Natural', 'Healthy', 'Beauty'];
 const el = document.querySelector('.scramble-text');
 const fx = new TextScramble(el);

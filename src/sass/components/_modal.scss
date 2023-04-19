@@ -1,356 +1,247 @@
 .unscroll {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .modal-info__container {
-    height: 100%;
+  height: 100%;
 
-    
-        overflow-y: scroll;
-    
+  overflow-y: scroll;
 }
-
 
 .overlay {
-    position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.2);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: initial;
-        // display: block;
-    // position: fixed;
-    // // top: 0;
-    // // left: 50%;
-    // top: 0px;
-    //     left: 0px;
-    // // transform: translateX(-50%);
-    // // z-index: 100;
-    // width: 100%;
-    //     height: 100%;
-    //     display: flex;
-    //     overflow: hidden scroll;
-    // background: rgba(0, 0, 0, 0.2);
-    // pointer-events: initial;
-    // transition: opacity 250ms linear, visibility 250ms linear;
-
-    // opacity: 0;
-    //     visibility: hidden;
-
-//     position: fixed;
-//         top: 0;
-//         bottom: 0;
-//         right: 0;
-//         left: 0;
-//         overflow: hidden;
-//         overflow-y: auto;
-//         -webkit-overflow-scrolling: touch;
-//         display: flex;
-//         flex-flow: column nowrap;
-// justify-content: flex-start;        /* см. ниже */
-//         align-items: center;
-//         z-index: 99;
-//         /* Чтобы окно не прилипало к границе
-//         браузера установим отступы */
-//         padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 
-// .backdrop.is-hidden {
-//     opacity: 0;
-//     visibility: hidden;
-//     pointer-events: none;
-// }
-.backdrop__is-hidden {
-    opacity: 0;
-    visibility: hidden;
-            // display: none;
+  .backdrop__is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.modal__wrap{
-    // flex-shrink: 0;
-    //     flex-grow: 0;
-    //     width: 100%;
-    //     min-height: 100%;
-    //     margin: auto;
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     align-items: center;
-    //     justify-content: center;
-    height: 200vh;
-        position: relative;
-        z-index: 1;
+.modal__wrap {
+  height: 200vh;
+  position: relative;
+  z-index: 1;
 }
 
-.modal{
-//     width: 320px;
-//     padding: 20px;
-//     background-color: $background-main;
-// // position: absolute;
-//     // top: 50%;
-//     // left: 50%;
-//     margin-top: 20px;
-//     margin-bottom: 100px;
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 20px 20px 20px;
 
-//     // transform: translateX(-50%);
+  width: 320px;
+  height: 95%;
+  background-color: $background-main;
+  overflow-y: scroll;
+  opacity: 0;
+  z-index: 30;
+  display: none;
 
-//     flex-shrink: 0;
-//         flex-grow: 0;
-//     margin: auto;
-//     // overflow: visible;
-//     max-width: 100%;
-//     transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
-//         transform: scale(1);
-//         // opacity: 0;
-//         display: none;
-//         overflow-y: auto;
-
-//         @include mq(desktop){
-//             width: 960px;
-//             padding: 50px;
-//         }
-
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-        padding: 60px 20px 20px 20px;
-
-width: 320px;
-height: 95%;
-        background-color: $background-main;
-overflow-y: scroll;
-opacity: 0;
-z-index: 30;
-display: none;
-
-@include mq(desktop){
+  @include mq(desktop) {
     width: 960px;
     padding: 50px;
-}
+  }
 }
 
 .modal-body {
-    padding: 24px;
-    background-color: $background-main;  
-      width: 960px;
-    margin: auto;
-    max-height: 90%;
-    overflow: auto;
-    position: relative;
+  padding: 24px;
+  background-color: $background-main;
+  width: 960px;
+  margin: auto;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
 }
-.modal.active{
-    opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        position: fixed;
-        display: block;
-
-        
-
-    // display: block;
-//     position: fixed;
-//     top: 2%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//         z-index: 30;
-// overflow: auto;
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  position: fixed;
+  display: block;
 }
 
-.overlay.active{
-    opacity: 1;
-        visibility: visible;
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-// .modal-bg {
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.8);
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: flex;
-//     padding: 20px;
-// }
+.modal__btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal__icon {
+  max-width: 20px;
+}
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
 
-// .modal__main-info{
-//     // display: flex;
-//         // flex-direction: column-reverse;
-// }
+  @include mq(desktop) {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+}
 
-.modal__btn{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.modal__picture {
+  @include mq(notDesktop) {
+    margin-bottom: 20px;
+  }
 }
-.modal__icon{
-    max-width: 20px;
-}
-.modal__wrapper{
-    display: flex;
-    flex-direction: column;
-
-    @include mq(desktop){
-        flex-direction: row;
-        margin-bottom: 20px;
-    }
-    
-}
-.modal__picture{
-    @include mq (notDesktop){
-        margin-bottom: 20px;
-    }
-}
-.modals__img{
-    @include mq (desktop){
+.modals__img {
+  @include mq(desktop) {
     width: 370px;
     height: 466px;
-    }
+  }
 }
-.modal__wrapper-info{
-
-    @include mq (desktop){
-margin-left: 40px;
+.modal__wrapper-info {
+  @include mq(notDesktop){
+    margin-bottom: 20px;
+  }
+  @include mq(desktop) {
+    margin-left: 40px;
     width: 450px;
-    }
-    
+  }
 }
 
-.modal__wrapper-logo{
-    display: flex;
+.modal__wrapper-logo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}
+.modal__wrapper-exc{
+  display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-
-    @include mq(desktop){
-            flex-direction: row;
-                margin-bottom: 10px;
+    margin-top: 20px;
+  
+    @include mq(desktop) {
+      flex-direction: row;
+      margin-bottom: 10px;
     }
-
 }
 
-.modal__subtitle{
-font-weight: 400;
-    font-size: 24px;
-        line-height: 1.45;
+.modal__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.45;
 
-
-        @include mq (desktop){
+  @include mq(desktop) {
     font-size: 30px;
-            line-height: 1.46;
-                        margin-right: 5px;
-        }
+    line-height: 1.46;
+    margin-right: 5px;
+  }
 }
 
-.modal__logoname{
-    font-weight: 400;
-        font-size: 24px;
-        line-height: 1.45;
-    
-    
-        @include mq (desktop) {
-            font-size: 30px;
-            line-height: 1.46;
-        }
+.modal__logoname {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.45;
+
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 1.46;
+  }
 }
 
-.modal__price{
-    font-weight: 400;
-        font-size: 24px;
-        line-height: 1.46;
-        color:$accent-txt;
-                margin-bottom: 10px;
-                @include mq (desktop) {
-                        font-size: 30px;
-                    }
+.modal__price {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.46;
+  color: $accent-txt;
+  margin-bottom: 10px;
+  @include mq(desktop) {
+    font-size: 30px;
+  }
 }
 
-.modal__txt-span{
-    font-weight: 700;
-        font-size: 20px;
-        line-height: 1.45;
-        
+.modal__txt-span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.45;
 }
 
-.modal__txt{
-    font-weight: 400;
-        font-size: 20px;
-        line-height:1.45;
-        margin-bottom: 20px;
+.modal__txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  margin-bottom: 20px;
 
-    &:last-child{
-        margin-bottom: 0px;
-    }
-    // &:nth-child(3){
-    //     margin-bottom: 0;
-    // }
-    //     &:nth-child(6) {
-    //         margin-bottom: 0;
-    //     }
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }
 .modal__list-numbers,
-.modal__list-dots{
-    padding-left: 20px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    &:last-child{
-        margin-bottom: 0;
-    }
+.modal__list-dots {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.modal__item-numbers, 
-.modal__item-dots{
-        font-weight: 400;
-            font-size: 20px;
-            line-height: 1.45;
+.modal__item-numbers,
+.modal__item-dots {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
 }
-.modal__item-dots{
-    list-style:disc;
+.modal__item-dots {
+  list-style: disc;
 }
 
 .modal__cross {
-    // padding: 10px 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-
-    
-
-    
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .modal__line {
-    display: block;
-    width: 40px;
-    height: 2px;
-    margin: 8px auto;
-    background-color: $accent-txt;
-    transition: 0.2s;
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 8px auto;
+  background-color: $accent-txt;
+  transition: 0.2s;
 }
 
 .modal__line:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .modal__cross.active .modal__line {
-    width: 25px;
+  width: 25px;
 }
 
 .modal__cross.active .modal__line:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .modal__cross.active .modal__line:nth-child(1) {
-    transform: translateY(12px) rotate(45deg);
-
+  transform: translateY(12px) rotate(45deg);
 }
 
 .modal__cross.active .modal__line:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }

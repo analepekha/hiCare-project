@@ -1,45 +1,71 @@
 <section class="partnership section" id="partnership">
-    <div class="container">
-            <h2 class="partnership__title title">
-                Партнерство
-            </h2>
-                    <div class="partnership__wrapper">
-
-            <form class="partnership__form" enctype="multipart/form-data" method="post" id="form-partner"  action="partnerForm.php" >
-                <input name="subject" type="hidden" value="Нова заявка на партнерство" />
-                <input class="partnership__input _req" type="text" name="name" placeholder="Ім’я та прізвище" required >
-                <input class="partnership__input" type="text" name="city" placeholder="Місто" required >
-                <input class="partnership__input" type="number" name="phone" placeholder="Номер телефону" required>
-                <input class="partnership__input _req _email" type="email" name="email"  placeholder="Email" required>
-                <select class="js-choice" name="other" >
-                    <option value=" ">Дані про ваш магазин</option>
-                    <option value="Інстаграм">Інстаграм</option>
-                    <option value="Свій сайт">Свій сайт</option>
-                    <option value="Prom">Prom</option>
-                    <option value="Фізичний магазин">Фізичний магазин</option>
-                    <option value="Інше">Інше</option>
-                </select>
-                <button class="form__btn" type="submit" id="my-form-button">Відправити</button>
-                <p class='form__status 'id="partner-status"></p>
-            </form>
-            <div class="partnership__info">
-            <h3 class="partnership__subtitle">Ми відкриті до співпраці з інтернет-магазинами, інста-шопами, фізичними магазинами, концепт-сторами, шоу-румами.</h3>
-            <p class="partnership__txt">Співпраця має бути взаємовигідною. Своїм партнерам надаємо маркетингову підтримку, лояльні умови та консультації. Завжди
-            відкриті до співпраці та колаборації.
-            Щоб отримати оптовий прайс, заповніть форму та відправте запит.</p>
-            <div class="partnership__contacts">
-                <ul class="contacts__list">
-                    <li class="contacts__item">
-                        <p class="contacts__item-txt">Телефон: </p>
-                        <a href="tel:+380506916763" class="contacts__item-link">+380506916763</a>
-                    </li>
-                    <li class="contacts__item">
-                        <p class="contacts__item-txt">Email: </p>
-                        <a href="mailto:opt@hicare.com.ua" class="contacts__item-link">opt@hicare.com.ua</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
+  <div class="container">
+    <h2 class="partnership__title title">Партнерство</h2>
+    <div class="partnership__wrapper">
+      <form
+        class="partnership__form"
+        enctype="multipart/form-data"
+        method="post"
+        id="form-partner"
+        action="partnerForm.php"
+      >
+        <input name="subject" type="hidden" value="Нова заявка на партнерство" />
+        <input
+          class="partnership__input _req"
+          type="text"
+          name="name"
+          placeholder="Ім’я та прізвище"
+          required
+        />
+        <input class="partnership__input" type="text" name="city" placeholder="Місто" required />
+        <input
+          class="partnership__input"
+          type="number"
+          name="phone"
+          placeholder="Номер телефону"
+          required
+        />
+        <input
+          class="partnership__input _req _email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <select class="js-choice" name="other">
+          <option value=" ">Дані про ваш магазин</option>
+          <option value="Інстаграм">Інстаграм</option>
+          <option value="Свій сайт">Свій сайт</option>
+          <option value="Prom">Prom</option>
+          <option value="Фізичний магазин">Фізичний магазин</option>
+          <option value="Інше">Інше</option>
+        </select>
+        <button class="form__btn" type="submit">Відправити</button>
+        <p class="form__status" id="partner-status"></p>
+      </form>
+      <div class="partnership__info">
+        <h3 class="partnership__subtitle">
+          Ми відкриті до співпраці з інтернет-магазинами, інста-шопами, фізичними магазинами,
+          концепт-сторами, шоу-румами.
+        </h3>
+        <p class="partnership__txt">
+          Співпраця має бути взаємовигідною. Своїм партнерам надаємо маркетингову підтримку, лояльні
+          умови та консультації. Завжди відкриті до співпраці та колаборації. Щоб отримати оптовий
+          прайс, заповніть форму та відправте запит.
+        </p>
+        <div class="partnership__contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__item-txt">Телефон:</p>
+              <a href="tel:+380506916763" class="contacts__item-link">+380506916763</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__item-txt">Email:</p>
+              <a href="mailto:opt@hicare.com.ua" class="contacts__item-link">opt@hicare.com.ua</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+  </div>
 </section>

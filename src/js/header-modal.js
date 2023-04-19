@@ -1,22 +1,8 @@
-// (() => {
-//   const menuBtnRef = document.querySelector('[data-menu-button]');
-//   const mobileMenuRef = document.querySelector('[data-header-menu]');
-//   const mobileBtnClose = document.querySelector('[data-menu-close]');
-
-//   menuBtnRef.addEventListener('click', () => {
-//     mobileMenuRef.classList.toggle('is-open');
-//   });
-//   mobileBtnClose.addEventListener('click', () => {
-//     mobileMenuRef.classList.toggle('is-open');
-//   });
-// })();
-
 const menuBtn = document.querySelector('#hamb');
 const mobileMenuRef = document.querySelector('[data-header-menu]');
 const body = document.body;
 
 menuBtn.addEventListener('click', menuOpenHandler);
-// menuBtnClose.addEventListener('click', menuCloseHandler);
 
 function menuOpenHandler(e) {
   e.preventDefault();
@@ -24,10 +10,6 @@ function menuOpenHandler(e) {
   menuBtn.classList.toggle('active');
   body.classList.toggle('noscroll');
 }
-// function menuCloseHandler(e) {
-//   e.preventDefault();
-//   mobileMenuRef.classList.toggle('is-open');
-// }
 
 const links = Array.from(mobileMenuRef.children);
 

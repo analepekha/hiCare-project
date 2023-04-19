@@ -1,95 +1,92 @@
-.contract__section{
-    padding-top: 50px;
-padding-bottom: 100px;
-    @include mq (desktop){
-        padding-top: 60px;
-           
-    }
+.contract__section {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  @include mq(desktop) {
+    padding-top: 60px;
+  }
 }
 
-.contract__title{
-    text-align: center;
+.contract__title {
+  text-align: center;
 }
 
-.contract__title{
-    @include mq (mobile-only){
-        margin-bottom: 10px;
-    }
+.contract__title {
+  @include mq(mobile-only) {
+    margin-bottom: 10px;
+  }
 }
 
-.contract__txt{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-        color: $primary-txt;
+.contract__txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: $primary-txt;
 }
 
-.contract__info-wrapper{
-        margin-bottom: 30px;
-    @include mq(desktop){
+.contract__info-wrapper {
+  margin-bottom: 30px;
+  @include mq(desktop) {
     margin-bottom: 40px;
-    }
+  }
 }
 
-.contract__subtitle{
-    font-weight: 400;
-        font-size: 24px;
-        line-height: 1.45;
-        text-align: center;
-        color: $accent-txt;
-        margin-bottom: 10px;
+.contract__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.45;
+  text-align: center;
+  color: $accent-txt;
+  margin-bottom: 10px;
 
-        @include mq(desktop){
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+  @include mq(desktop) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
-.contract__txt-about{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-        color: $primary-txt;
+.contract__txt-about {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: $primary-txt;
 }
-.contract__txt{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-    margin-bottom: 30px;
-    color:$primary-txt;
+.contract__txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  margin-bottom: 30px;
+  color: $primary-txt;
 }
-.contract__list-info{
-    padding-left: 20px;
-        margin-top: -30px;
-            margin-bottom: 30px;
-}
-
-.contract__item-info{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-        color: $primary-txt;
-        list-style: disc;
+.contract__list-info {
+  padding-left: 20px;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
-.contract__link{
-    display: block;
-    margin-right: auto;
-        margin-left: auto;
-        width: 194px;
-    font-weight: 400;
-        font-size: 22px;
-        line-height: 1.45;
-        color: $secondary-txt;
-        background-color: $background-hover-color;
-        // width: 100%;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: center;
-        transition: background-color 250ms $cubic;
-    
-        &:focus,
-        :hover {
-            background-color: $background-pressed-color;
-        }
-    
+.contract__item-info {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: $primary-txt;
+  list-style: disc;
+}
+
+.contract__link {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 194px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  color: $secondary-txt;
+  background-color: $background-hover-color;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  transition: background-color 250ms $cubic;
+
+  &:focus,
+  :hover {
+    background-color: $background-pressed-color;
+  }
 }

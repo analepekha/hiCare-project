@@ -1,297 +1,280 @@
 .partnership__wrapper {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 
-    @include mq (desktop){
-        flex-direction: row;
-    }
-
+  @include mq(desktop) {
+    flex-direction: row;
+  }
 }
 
-.partnership__info{
-    @include mq(desktop){
-        display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-    }
-}
-.partnership__form {
+.partnership__info {
+  @include mq(desktop) {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.partnership__form {
+  display: flex;
+  flex-direction: column;
 
-    @include mq (desktop){
+  @include mq(desktop) {
     margin-right: 60px;
-    }
+  }
 
-
-    position: relative;
+  position: relative;
 }
 
-.partnership__form::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0 ;
-    width: 100%;
-    height: 100%;
-    background: hsla(0, 0%, 20%, 0.622) url(/images/loading.gif) center /50px no-repeat;
-    opacity: 0;
-    visibility: hidden;
+.partnership__form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 20%, 0.622) url(/images/loading.gif) center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.partnership__form._sending::after{
-opacity: 1;
-visibility: visible;
+.partnership__form._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 
-.partnership__input{
-    width: 100%;
-padding: 13px 30px;
-    margin-bottom: 10px;
-    outline: none;
-    border: 1px solid $primary-txt;
-    background-color: $background-main;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.45;
-    @include mq(desktop){
+.partnership__input {
+  width: 100%;
+  padding: 13px 30px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid $primary-txt;
+  background-color: $background-main;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  @include mq(desktop) {
     width: 500px;
-    }
-    
+  }
 }
 
-.partnership__input._error{
-        border: 1px solid red;
+.partnership__input::placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: rgb(18, 18, 17, 0.7);
 }
 
-.partnership__input::placeholder{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-        color: rgb(18, 18, 17, 0.7);
+.partnership__input:hover {
+  border: 1px solid $accent-txt;
 }
 
-.partnership__input:hover{
-        border: 1px solid $accent-txt;
-
+.partnership__input:focus {
+  border: 1px solid $pressed-txt;
 }
 
-.partnership__input:focus{
-    border: 1px solid $pressed-txt;
-
+.partnership__option {
+  width: 500px;
+  background-color: $background-main;
+  opacity: 0.8;
 }
 
-.partnership__option{
-    width: 500px;
-    background-color: $background-main;
-    opacity: 0.8;
-}
+.form__btn {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  border: 1px solid $primary-txt;
+  width: 100%;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  color: $primary-txt;
+  outline: none;
 
-.form__btn{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-        border: 1px solid $primary-txt;
-width: 100%;
-padding-bottom: 13px;
-padding-top: 13px;
-color: $primary-txt;
-outline: none;
-
-transition: all 250ms $cubic;
-&:hover{
-    color:$secondary-txt;
+  transition: all 250ms $cubic;
+  &:hover {
+    color: $secondary-txt;
     background-color: $background-hover-color;
     border: 1px solid $background-hover-color;
-}
-&:focus {
+  }
+  &:focus {
     color: $secondary-txt;
     background-color: $background-pressed-color;
     border: 1px solid $background-pressed-color;
-}
-        @include mq(desktop){
-        padding: 13px 196px;
-        }
-}
-
-.partnership__subtitle{
-    font-weight: 400;
-        font-size: 24px;
-        line-height: 1.46;
-        color: $accent-txt;
-
-        margin-bottom: 10px;
-         @include mq(desktop){
-                    font-size: 30px;
-                            margin-bottom: 0px;
-         }
+  }
+  @include mq(desktop) {
+    padding: 13px 196px;
+  }
 }
 
-.partnership__txt{
-font-weight: 400;
-font-size: 20px;
-line-height: 1.45;
-margin-bottom: 20px;
-@include mq(desktop) {
-// margin-bottom: 0; 
-   }
+.partnership__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.46;
+  color: $accent-txt;
+
+  margin-bottom: 10px;
+  @include mq(desktop) {
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
 }
-.contacts__list{
+
+.partnership__txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  @include mq(desktop) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+.contacts__item {
+  @include mq(notDesktop) {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    @include mq (desktop) {
-            flex-direction: row;
-            margin-bottom: 0;
-        }
-
-
+  }
 }
-.contacts__item{
-    @include mq(notDesktop){
-        display: flex;
-    }
-}
-.contacts__item:not(:last-child){
-    margin-right: 100px;
+.contacts__item:not(:last-child) {
+  margin-right: 100px;
 }
 
-.contacts__item-txt{
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-                color: $accent-txt;
+.contacts__item-txt {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: $accent-txt;
 
-                @include mq(notDesktop) {
-                        margin-right: 5px;
-                    }
-
+  @include mq(notDesktop) {
+    margin-right: 5px;
+  }
 }
 
-.contacts__item-link{
-font-weight: 400;
-    font-size: 20px;
-        line-height: 1.45;
-        color: $primary-txt;
-        transition: color 250ms $cubic;
+.contacts__item-link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  color: $primary-txt;
+  transition: color 250ms $cubic;
 
-        &:hover{
-            color:$accent-txt;
-        }
+  &:hover {
+    color: $accent-txt;
+  }
 
-        &:focus{
-            color:$pressed-txt;
-        }
-    }
-
-.choices{
-    width: 100%;
-    margin-bottom: 10px;
-    @include mq (desktop) {
-    width: 500px;        }
-        
+  &:focus {
+    color: $pressed-txt;
+  }
 }
 
-.choices__inner{
-    border-width: 1px;
-            border: 1px solid rgb(18, 18, 17, 0.7);
-                background-color:$background-main;
-                padding: 13px 30px;
-                font-weight: 400;
-                    font-size: 20px;
-                    line-height: 1.45;
-                    border-radius:0;
+.choices {
+  width: 100%;
+  margin-bottom: 10px;
+  @include mq(desktop) {
+    width: 500px;
+  }
 }
 
-.choices__inner._error{
-                border: 1px solid red;
+.choices__inner {
+  border-width: 1px;
+  border: 1px solid rgb(18, 18, 17, 0.7);
+  background-color: $background-main;
+  padding: 13px 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
+  border-radius: 0;
 }
-.choices__list--single{
-    padding: 0;
-        color: rgb(18, 18, 17, 0.7);
+
+.choices__list--single {
+  padding: 0;
+  color: rgb(18, 18, 17, 0.7);
 }
-.is-open .choices__inner{
-        border-radius: 0;
-    border: 1px solid rgb(18, 18, 17, 0.7);
+.is-open .choices__inner {
+  border-radius: 0;
+  border: 1px solid rgb(18, 18, 17, 0.7);
 }
-.choices__inner:hover{
-border: 1px solid $accent-txt;
+.choices__inner:hover {
+  border: 1px solid $accent-txt;
 }
 .is-focused .choices__inner {
-    border-radius: 0;
-    border: 1px solid $accent-txt;
+  border-radius: 0;
+  border: 1px solid $accent-txt;
 }
-.choices[data-type*=select-one] .choices__inner {
-    padding-bottom: 13px;
+.choices[data-type*='select-one'] .choices__inner {
+  padding-bottom: 13px;
 }
 
 .is-open .choices__list--dropdown {
-    border-color: #121211;
-    // border-top: 0;
-    background-color: $background-main;
-    border-radius: 0;
-
+  border-color: $primary-txt;
+  background-color: $background-main;
+  border-radius: 0;
 }
 
-.choices__list--dropdown{
-        border-radius: 0;
+.choices__list--dropdown {
+  border-radius: 0;
 }
-
 
 .choices__list--dropdown .choices__item--selectable {
-     padding-right: 30px;
-     padding-left: 30px;
-     color: rgb(18, 18, 17, 0.7);
+  padding-right: 30px;
+  padding-left: 30px;
+  color: rgb(18, 18, 17, 0.7);
 }
 
 .choices__list--dropdown .choices__item {
-padding-right: 30px;
-    padding-left: 30px;
-    font-weight: 400;
-        font-size: 20px;
-        line-height: 1.45;
-// &:not(:last-child){
-//     // margin-bottom: 26px;
-// }
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.45;
 }
 
-.choices[data-type*=select-one]:after{
-    height: 10px;
-    width: 10px;
-    z-index: 3;
-    top:40%;
-    border: 2px solid rgb(18, 18, 17, 0.7);
-    border-width: 0 0 2px 2px;
-    transform: rotate(-45deg);
-    margin-right: 10px;
-    @include mq (desktop){
+.choices[data-type*='select-one']:after {
+  height: 10px;
+  width: 10px;
+  z-index: 3;
+  top: 40%;
+  border: 2px solid rgb(18, 18, 17, 0.7);
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+  margin-right: 10px;
+  @include mq(desktop) {
     margin-right: 20px;
-    }
+  }
 }
 
-.choices[data-type*=select-one].is-open:after {
-    top: 60%;
-    border: 2px solid rgb(18, 18, 17, 0.7);
-    border-width:   2px 2px 0 0 ;
+.choices[data-type*='select-one'].is-open:after {
+  top: 60%;
+  border: 2px solid rgb(18, 18, 17, 0.7);
+  border-width: 2px 2px 0 0;
 }
-.choices__placeholder{
-    opacity: 1;
+.choices__placeholder {
+  opacity: 1;
 }
-.choices__list--dropdown .choices__placeholder{
-    display: none;
+.choices__list--dropdown .choices__placeholder {
+  display: none;
 }
-.form__status{
-    display: none;
+.form__status {
+  display: none;
 }
-._status{ 
-    position: absolute;
-    bottom: -60px;
-    display: flex;
-justify-content: center;
-font-weight: 400;
-    font-size: 20px;
-    line-height: 1.45;
-    width: 100%;
-        padding: 13px 30px;
-        // margin-top: 10px;
+._status {
+    font-size:16px;
+    color:$primary-txt;
+  
+  display: flex;
+flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 1.45;
+  width: 100%;
+
+  margin-top: 10px;
+
+  @include mq(desktop){
+position: absolute;
+  bottom: -30px;
+  margin-top: 0;
+  }
 }
