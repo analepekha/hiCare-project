@@ -46,6 +46,28 @@
   }
 }
 
+.header__logo-contract{
+  font-weight: 400;
+    font-size: 24px;
+    line-height: 1.45;
+    color: $secondary-txt;
+  
+    @include mq(desktop) {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.46;
+  
+      margin-right: 274px;
+    }
+
+    &:hover{
+      color:$accent-txt;
+    }
+    &:focus{
+      color:$pressed-txt;
+    }
+}
+
 .nav {
   display: none;
   @include mq(desktop) {
