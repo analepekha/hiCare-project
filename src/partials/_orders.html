@@ -25,11 +25,9 @@
             placeholder="Номер телефону"
             required
           />
-          <button class="orders__btn" type="submit" >Хочу замовити</button>
+          <button class="orders__btn" type="submit">Хочу замовити</button>
           <p class="form__status" id="order-status"></p>
-
         </form>
-
       </div>
       <picture class="orders__picture">
         <source
@@ -40,9 +38,17 @@
         <source
           srcset="images/orders/orders_lg.jpg 1x, images/orders/orders_lg@2x.jpg 2x"
           media="(min-width: 1160px)"
-          type="image/jpg"
         />
-        <img src="/images/orders/orders_lg.jpg" alt="HiCare товар" width="600" height="286" />
+        <source
+          srcset="images/orders/orders_sm.webp 1x, images/orders/orders_sm@2x.webp 2x"
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <source
+          srcset="images/orders/orders_sm.jpg 1x, images/orders/orders_sm@2x.jpg 2x"
+          media="(min-width: 320px)"
+        />
+        <img src="/images/orders/orders_sm.jpg" alt="HiCare товар" width="360" height="244" />
       </picture>
     </div>
   </div>

@@ -118,14 +118,16 @@
   <div class="container swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide customer-item">
-        <img
-          class="products__img"
-          srcset="/images/products/products-1_sm.jpg 1x, /images/products/products-1_sm@2x.jpg 2x"
-          src="/images/products/products-1_sm.jpg"
-          alt="Шампунь зміцнюючий HiCare "
-          width="320"
-          height="360"
-        />
+        <picture>
+          <source srcset="images/products/products-1_sm.webp 1x,
+           images/products/products-1_sm@2x.webp 2x"
+            media="(min-width: 320px)" type="image/webp" />
+          <source srcset="images/products/products-1_sm.jpg 1x, 
+          images/products/products-1_sm@2x.jpg 2x"
+            media="(min-width: 320px)"  />
+          <img src="/images/products/products-1_sm.jpg" alt="Шампунь зміцнюючий HiCare " class="products__img" width="320"
+            height="360" />
+        </picture>
         <div class="item__wrapper-info">
           <h3 class="item__title">Шампунь зміцнюючий</h3>
           <p class="item__logoname">HiCare</p>
@@ -134,14 +136,14 @@
         <button class="item__btn js-open-modal" data-modal="1">Детальніше</button>
       </div>
       <div class="swiper-slide">
-        <img
-          class="products__img"
-          srcset="/images/products/products-2_sm.jpg 1x, /images/products/products-2_sm@2x.jpg 2x"
-          src="/images/products/products-2_sm.jpg"
-          alt="Маска для волосся HiCare"
-          width="320"
-          height="360"
-        />
+        <picture>
+          <source srcset="images/products/products-2_sm.webp 1x,
+                   images/products/products-2_sm@2x.webp 2x" media="(min-width: 320px)" type="image/webp" />
+          <source srcset="images/products/products-2_sm.jpg 1x, 
+                  images/products/products-2_sm@2x.jpg 2x" media="(min-width: 320px)" />
+          <img src="/images/products/products-2_sm.jpg" alt="Маска для волосся HiCare " class="products__img" width="320"
+            height="360" />
+        </picture>
         <div class="item__wrapper-info">
           <h3 class="item__title">Маска для волосся</h3>
           <p class="item__logoname">HiCare</p>
@@ -150,14 +152,14 @@
         <button class="item__btn js-open-modal" data-modal="2">Детальніше</button>
       </div>
       <div class="swiper-slide">
-        <img
-          class="products__img"
-          srcset="/images/products/products-3_sm.jpg 1x, /images/products/products-3_sm@2x.jpg 2x"
-          src="/images/products/products-3_sm.jpg"
-          alt="Скраб для шкіри голови HiCare"
-          width="320"
-          height="360"
-        />
+        <picture>
+          <source srcset="images/products/products-3_sm.webp 1x,
+                           images/products/products-3_sm@2x.webp 2x" media="(min-width: 320px)" type="image/webp" />
+          <source srcset="images/products/products-3_sm.jpg 1x, 
+                          images/products/products-3_sm@2x.jpg 2x" media="(min-width: 320px)" />
+          <img src="/images/products/products-3_sm.jpg" alt="Скраб для шкіри голови HiCare " class="products__img" width="320"
+            height="360" />
+        </picture>
         <div class="item__wrapper-info">
           <h3 class="item__title">Скраб для шкіри голови</h3>
           <p class="item__logoname">HiCare</p>
@@ -166,14 +168,14 @@
         <button class="item__btn js-open-modal" data-modal="3">Детальніше</button>
       </div>
       <div class="swiper-slide">
-        <img
-          class="products__img"
-          srcset="/images/products/products-4_sm.jpg 1x, /images/products/products-4_sm@2x.jpg 2x"
-          src="/images/products/products-4_sm.jpg"
-          alt="Пінка для вмивання HiCare"
-          width="320"
-          height="360"
-        />
+        <picture>
+          <source srcset="images/products/products-4_sm.webp 1x,
+                                   images/products/products-4_sm@2x.webp 2x" media="(min-width: 320px)" type="image/webp" />
+          <source srcset="images/products/products-4_sm.jpg 1x, 
+                                  images/products/products-4_sm@2x.jpg 2x" media="(min-width: 320px)" />
+          <img src="/images/products/products-4_sm.jpg" alt="Пінка для вмиванняHiCare " class="products__img" width="320"
+            height="360" />
+        </picture>
         <div class="item__wrapper-info">
           <h3 class="item__title">Пінка для вмивання</h3>
           <p class="item__logoname">HiCare</p>
@@ -184,6 +186,5 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-
   <div class="overlay backdrop__is-hidden js-overlay-modal" id="overlay-modal"></div>
 </section>

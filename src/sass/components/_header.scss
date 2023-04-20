@@ -36,16 +36,6 @@
   font-size: 24px;
   line-height: 1.45;
   color: $secondary-txt;
-  transition: 1s;
-  cursor: pointer;
-
-  &:hover {
-    color: $accent-txt;
-    transform: scale(1.2);
-  }
-  &:focus {
-    color: $pressed-txt;
-  }
 
   @include mq(desktop) {
     font-weight: 400;
