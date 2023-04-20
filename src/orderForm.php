@@ -38,7 +38,7 @@ if (!error_get_last()) {
     $mail->setFrom('test.hicareco@gmail.com', 'Системний менеджер HiCare'); // Адрес самой почты и имя отправителя
     
     // Получатель письма
-    $mail->addAddress('partnership@hicare.com.ua');  
+    $mail->addAddress('order@hicare.com.ua');  
     
     $mail->isHTML(true);
     $mail->Subject = $title;
