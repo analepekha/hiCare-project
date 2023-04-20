@@ -46,11 +46,12 @@
   }
 }
 
-.header__logo-contract{
+.logo-contract{
   font-weight: 400;
     font-size: 24px;
     line-height: 1.45;
     color: $secondary-txt;
+    transition: color 250ms $cubic;
   
     @include mq(desktop) {
       font-weight: 400;
