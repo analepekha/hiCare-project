@@ -2,6 +2,11 @@
 require 'php-mailer/PHPMailer.php';
 require 'php-mailer/SMTP.php';
 require 'php-mailer/Exception.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
+  
 if (!error_get_last()) {
     $name = $_POST['name'] ;
     $phone = $_POST['phone'];
@@ -21,14 +26,14 @@ if (!error_get_last()) {
     // $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
     
-    $mail->Host       = 'smtp.gmail.com'; 
-    $mail->Username   = 'test.hicareco';
-    $mail->Password   = 'gyieisvjpbzilgcc';
+    $mail->Host       = $_ENV['HOST']; 
+    $mail->Username   = $_ENV['USER'];
+    $mail->Password   = $_ENV['PASSWORD'];
     $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('test.hicareco@gmail.com', 'Системний менеджер HiCare'); 
+    $mail->Port       = $_ENV['PORT'];
+    $mail->setFrom($_ENV['USER_EMAIL'], 'Системний менеджер HiCare'); 
     
-    $mail->addAddress('order@hicare.com.ua');  
+    $mail->addAddress($_ENV['ADDRESS_ORDER_EMAIL']);
     
     $mail->isHTML(true);
     $mail->Subject = $title;
